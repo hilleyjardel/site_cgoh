@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Princesinha do Litoral - Revenda de gás com entrega rápida, segura e confiável. Peça seu gás pelo WhatsApp." />
+  <meta name="keywords" content="gás, revenda de gás, pedir gás, gás de cozinha, Princesinha do Litoral" />
+  <meta name="author" content="Princesinha do Litoral" />
+  <title>Princesinha do Litoral | Revenda de Gás</title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <!-- Substitua o src pela imagem em anexo no seu servidor -->
+  <img src="./img/logo_cgoh.png" alt="Princesinha do Litoral" />
+  <nav>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#negocio">Para Seu Negócio</a>
+    <a href="#pedir-gas">Pedir Gás</a>
+    <a href="#revendedor">Busque um Revendedor</a>
+    <a href="#contato">Fale Conosco</a>
+    <a href="#trabalhe">Trabalhe Conosco</a>
+  </nav>
+</header>
+
+<!-- Banner Home / Carousel -->
+<div class="carousel">
+  <img src="./baner/banner1.png" class="active" alt="Notícia importante 1" />
+  <img src="./baner/banner2.jpg" alt="Notícia importante 2" />
+  <img src="./baner/banner3.jpg" alt="Notícia importante 3" />
+ 
+
+  <!-- Botão Play / Pause -->
+  <button id="toggleCarousel" style="position:absolute;top:20px;right:20px;background:rgba(0,0,0,0.6);color:#fff;border:none;padding:10px 14px;border-radius:50%;font-size:16px;cursor:pointer;">⏸</button>
+
+  <!-- Setas de navegação -->
+  <button id="prevSlide" style="position:absolute;top:50%;left:15px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:12px 16px;border-radius:50%;font-size:20px;cursor:pointer;">❮</button>
+  <button id="nextSlide" style="position:absolute;top:50%;right:15px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:12px 16px;border-radius:50%;font-size:20px;cursor:pointer;">❯</button>
+</div>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5585999370089" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.3);z-index:999;"><img src="./img/whatsapp.png" alt="WhatsApp" style="width:100%;height:100%;"></a>
+</div>
+
+<section id="quem-somos">
+  <h2>Quem Somos</h2>
+  <p>A <strong>Princesinha do Litoral</strong> é uma revenda de gás comprometida com segurança, agilidade e confiança. Atuamos para levar gás de qualidade até sua casa ou empresa, sempre com atendimento próximo e responsável.</p>
+</section>
+
+<section id="negocio">
+  <h2>Para Seu Negócio</h2>
+  <p>Oferecemos soluções completas em fornecimento de gás para comércios, restaurantes, condomínios e indústrias, com logística eficiente e contratos sob medida.</p>
+</section>
+
+<section id="pedir-gas" class="cta">
+  <h2>Pedir Gás</h2>
+  <p>Preencha o formulário abaixo e envie seu pedido diretamente pelo WhatsApp.</p>
+  <form onsubmit="enviarPedidoWhatsApp(); return false;" style="max-width:500px;margin:0 auto;">
+    <input id="nomePedido" type="text" placeholder="Seu nome" required style="width:100%;padding:10px;margin-bottom:10px;" />
+    <input id="enderecoPedido" type="text" placeholder="Endereço completo" required style="width:100%;padding:10px;margin-bottom:10px;" />
+    <select id="produtoPedido" style="width:100%;padding:10px;margin-bottom:10px;">
+      <option>Gás P13</option>
+      <option>Gás P20</option>
+      <option>Gás P45</option>
+    </select>
+    <textarea id="obsPedido" placeholder="Observações" style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
+    <button type="submit" style="background:#b30000;color:#fff;padding:14px 25px;border:none;border-radius:6px;font-size:16px;">Enviar Pedido pelo WhatsApp</button>
+  </form>
+</section>
+
+<section id="revendedor">
+  <h2>Busque um Revendedor</h2>
+  <p>Estamos localizados em Pindoretama - CE. Veja nossa localização no mapa:</p>
+  <iframe src="https://www.google.com/maps?q=Rua+Raimundo+Santino+Costa,+649,+Pindoretama+-+CE&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="contato">
+  <h2>Fale Conosco</h2>
+  <p><strong>Endereço:</strong> Rua Raimundo Santino Costa, 649 – Pindoretama/CE – CEP 62860-000</p>
+  <p><strong>Telefone:</strong> (85) 3375-1100</p>
+  <p><strong>E-mail:</strong> comercialdegaspdl@gmail.com</p>
+  <form action="https://formsubmit.co/comercialdegaspdl@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="text" name="nome" placeholder="Seu nome" required style="width:100%;padding:10px;margin-bottom:10px;" />
+    <input type="email" name="email" placeholder="Seu e-mail" required style="width:100%;padding:10px;margin-bottom:10px;" />
+    <textarea name="mensagem" placeholder="Mensagem" required style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
+    <button type="submit" style="background:#b30000;color:#fff;padding:12px 20px;border:none;border-radius:5px;">Enviar Mensagem</button>
+  </form>
+</section>
+
+<section id="trabalhe">
+<h2>Trabalhe Conosco</h2>
+<p>Envie seus dados e anexe seu currículo (PDF ou DOC).</p>
+<form action="https://formsubmit.co/comercialdegaspdl@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_captcha" value="false" />
+<input type="text" name="nome" placeholder="Seu nome" required style="width:100%;padding:10px;margin-bottom:10px;" />
+<input type="email" name="email" placeholder="Seu e-mail" required style="width:100%;padding:10px;margin-bottom:10px;" />
+<input type="text" name="cargo" placeholder="Área de interesse" style="width:100%;padding:10px;margin-bottom:10px;" />
+<input type="file" name="curriculo" accept=".pdf,.doc,.docx" required style="width:100%;padding:10px;margin-bottom:10px;" />
+<textarea name="mensagem" placeholder="Mensagem (opcional)" style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
+<button type="submit" style="background:#b30000;color:#fff;padding:12px 20px;border:none;border-radius:5px;">Enviar Currículo</button>
+</form>
+</section>
+
+<footer>
+  <div class="columns">
+    <div>
+      <h4>Links Importantes</h4>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#pedir-gas">Pedir Gás</a>
+      <a href="#revendedor">Revendedores</a>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p>📞 (37) 3375-1100</p>
+      <p>📞 (37) 3375-1808</p>
+      <p>💬 WhatsApp: (99) 99937-0089</p>
+    </div>
+  </div>
+
+  <div class="copyright">
+    © 2026 Princesinha do Litoral – Todos os direitos reservados.<br />
+    <span class="trust">🔒 Site Confiável</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
